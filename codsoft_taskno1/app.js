@@ -32,3 +32,21 @@ function menuToggle(){
     toggleMenu.classList.toggle('active');
     navigation.classList.toggle('active');
 }
+
+// JavaScript to control text-box visibility
+function showText(textId) {
+    // Hide all text-box elements
+    const textElements = document.querySelectorAll('.text-box');
+    textElements.forEach((element) => {
+        element.style.display = 'none';
+    });
+
+    // Show the selected text-box
+    const selectedText = document.getElementById(textId);
+    if (selectedText) {
+        selectedText.style.display = 'block';
+    }
+}
+
+// Initially show the Sprite text-box (default)
+showText('sprite-text');
